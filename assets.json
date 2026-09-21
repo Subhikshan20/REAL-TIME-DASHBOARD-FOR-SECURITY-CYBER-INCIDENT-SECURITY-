@@ -1,0 +1,10 @@
+{
+  "name": "Lab asset inventory (host criticality)",
+  "note": "Maps monitored hosts to a business criticality used in the composite risk score. Replace with your own inventory (or export from a CMDB).",
+  "assets": [
+    {"ip": "10.0.0.5",  "hostname": "web-server-01", "role": "Public web server",      "criticality": "critical", "owner": "web-team"},
+    {"ip": "10.0.0.6",  "hostname": "app-server-01", "role": "Application server",      "criticality": "high",     "owner": "app-team"},
+    {"ip": "10.0.0.7",  "hostname": "file-server-01","role": "Internal file share",     "criticality": "medium",   "owner": "it-ops"},
+    {"ip": "10.0.0.10", "hostname": "db-server-01",  "role": "Primary database",        "criticality": "critical", "owner": "data-team"}
+  ]
+}
