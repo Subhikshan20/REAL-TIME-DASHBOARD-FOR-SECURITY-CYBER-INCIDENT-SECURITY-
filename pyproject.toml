@@ -1,0 +1,53 @@
+[project]
+name = "suricata-wazuh-soc-dashboard"
+version = "1.0.0"
+description = "Real-time SOC dashboard correlating Suricata IDS signatures with Wazuh SIEM telemetry"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q --strict-markers"
+filterwarnings = [
+    # The choropleth now supplies ISO-3 codes itself (see geo.py), so Plotly's
+    # deprecated country-name matcher must never fire again — fail if it does.
+    "error:.*locationmode.*:DeprecationWarning",
+]
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["tests/*", "src/mock_data_generator.py", ".venv/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = [".venv", "data"]
+
+[tool.ruff.lint]
+# pycodestyle (E/W), pyflakes (F), isort (I), pyupgrade (UP), flake8-bugbear (B).
+select = ["E", "F", "W", "I", "UP", "B"]
+# E741 ambiguous var names; B008 (Streamlit/format helpers); E501 handled by black.
+ignore = ["E501", "B008"]
+
+[tool.mypy]
+# 3.12 so mypy accepts the modern type-statement syntax in numpy 2.x stubs.
+python_version = "3.12"
+# Application modules live under src/ (flat, no package), so add it to the path.
+mypy_path = "src"
+ignore_missing_imports = true
+warn_unused_ignores = false
+warn_redundant_casts = true
+no_implicit_optional = true
+exclude = ["tests/", "\\.venv/"]
+# Pragmatic: this is a data/UI app, not a typed library — keep type-checking
+# useful without demanding full annotations on every function.
+disallow_untyped_defs = false
+check_untyped_defs = false

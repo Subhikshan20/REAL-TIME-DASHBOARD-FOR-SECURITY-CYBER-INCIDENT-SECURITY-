@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software in academic work, please cite it as below."
+title: "Real-Time SOC Dashboard — Suricata × Wazuh"
+abstract: >-
+  A real-time Security Operations Center dashboard that correlates Suricata IDS
+  network signatures with Wazuh SIEM host telemetry, categorises four attack
+  classes (scan, brute force, DoS, exploit delivery), maps them to MITRE ATT&CK,
+  and computes detection accuracy, false-positive rate and Mean-Time-To-Detect
+  with repeated-run confidence intervals.
+version: "1.0.0"
+date-released: "2026-06-28"
+license: MIT
+keywords:
+  - SOC
+  - Suricata
+  - Wazuh
+  - intrusion detection
+  - MITRE ATT&CK
+  - SIEM correlation
+authors:
+  - given-names: "Subhikshan"
+    family-names: "Rajkumar"

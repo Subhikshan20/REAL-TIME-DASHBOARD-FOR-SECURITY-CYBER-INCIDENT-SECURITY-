@@ -1,0 +1,10 @@
+# SOC Dashboard — runtime dependencies (pinned for reproducibility).
+# Verified on Python 3.14. Use the Dockerfile for a guaranteed-reproducible env.
+
+streamlit==1.58.0      # Dashboard UI framework (rapid SOC prototyping)
+pandas==3.0.3          # Tabular data handling / metric calculations
+numpy==2.5.0           # Numerical helpers used by metrics
+plotly==6.8.0          # Interactive attack-pattern & MITRE visualisations
+requests==2.34.2       # Wazuh north-bound API + indexer HTTP client
+urllib3==2.7.0         # TLS warning control + retry policy for self-signed certs
+reportlab==5.0.0       # PDF analyst-report export
