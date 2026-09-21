@@ -1,0 +1,13 @@
+{
+  "name": "Sample local threat-intelligence feed (analyst-curated)",
+  "note": "Offline indicator list used by enrichment.py. Replace with your own feed (or export from MISP/OpenCTI). Online lookups are OFF by default; the dashboard never contacts external services unless you explicitly enable and configure them.",
+  "updated": "2026-06-28",
+  "indicators": [
+    {"indicator": "203.0.113.7",    "type": "ip", "tags": ["scanner", "recon", "nmap"],            "severity": "suspicious", "confidence": 70},
+    {"indicator": "198.51.100.23",  "type": "ip", "tags": ["exploit", "web-attack", "log4j"],       "severity": "malicious",  "confidence": 88},
+    {"indicator": "192.0.2.66",     "type": "ip", "tags": ["dos", "flood"],                          "severity": "malicious",  "confidence": 80},
+    {"indicator": "45.155.205.99",  "type": "ip", "tags": ["bruteforce", "ssh", "credential-access"],"severity": "malicious",  "confidence": 92},
+    {"indicator": "91.92.250.10",   "type": "ip", "tags": ["bruteforce", "ssh", "encrypted"],        "severity": "malicious",  "confidence": 85},
+    {"indicator": "185.220.101.0/24","type": "cidr","tags": ["tor-exit", "anonymizer"],              "severity": "suspicious", "confidence": 60}
+  ]
+}
