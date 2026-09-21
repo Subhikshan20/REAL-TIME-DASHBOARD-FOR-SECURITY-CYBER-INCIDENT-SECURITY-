@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#555"/>
+    </marker>
+    <style>
+      .box{rx:8;ry:8;stroke:#cfcfcf;stroke-width:1.2;}
+      .t{font-size:13px;fill:#1a1a1a;}
+      .h{font-size:13.5px;font-weight:700;fill:#ffffff;}
+      .s{font-size:11px;fill:#555;}
+      .lane{font-size:12px;font-weight:700;fill:#444;}
+      .edge{stroke:#777;stroke-width:1.6;fill:none;marker-end:url(#arrow);}
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="640" fill="#ffffff"/>
+  <text x="24" y="34" font-size="20" font-weight="700" fill="#1a1a1a">Real-Time SOC Dashboard — Suricata × Wazuh: Architecture</text>
+
+  <!-- LANE 1: Lab sources -->
+  <text x="24" y="74" class="lane">Lab telemetry</text>
+  <rect class="box" x="24" y="84" width="200" height="58" fill="#eaf2fb"/>
+  <text x="36" y="108" class="t" font-weight="700">Suricata IDS sensor</text>
+  <text x="36" y="126" class="s">EVE JSON network signatures</text>
+
+  <rect class="box" x="24" y="156" width="200" height="58" fill="#fdf3e3"/>
+  <text x="36" y="180" class="t" font-weight="700">Host logs (Wazuh agents)</text>
+  <text x="36" y="198" class="s">auth · FIM · audit / exec</text>
+
+  <!-- LANE 2: Wazuh -->
+  <rect class="box" x="276" y="84" width="190" height="130" fill="#f4f4f4"/>
+  <rect x="276" y="84" width="190" height="26" fill="#0072B2" class="box"/>
+  <text x="286" y="102" class="h">Wazuh SIEM</text>
+  <text x="288" y="132" class="t">Manager (JWT API :55000)</text>
+  <text x="288" y="154" class="t">Correlation &amp; rules</text>
+  <text x="288" y="176" class="t">Indexer :9200</text>
+  <text x="288" y="194" class="s">wazuh-alerts-* (OpenSearch)</text>
+
+  <!-- LANE 3: ingest -->
+  <rect class="box" x="518" y="74" width="250" height="150" fill="#f4f4f4"/>
+  <rect x="518" y="74" width="250" height="26" fill="#009E73" class="box"/>
+  <text x="528" y="92" class="h">ingest.py — canonical schema</text>
+  <text x="530" y="120" class="t">• Live Wazuh API (paginated)</text>
+  <text x="530" y="142" class="t">• Suricata eve.json (+ tailing)</text>
+  <text x="530" y="164" class="t">• Wazuh export (array/NDJSON)</text>
+  <text x="530" y="186" class="t">• Mock fixture (dev only)</text>
+  <text x="530" y="208" class="s">wazuh_api.py · mock_data_generator.py</text>
+
+  <!-- LANE 4: processing -->
+  <rect class="box" x="790" y="74" width="186" height="150" fill="#eef0f2"/>
+  <text x="800" y="98" class="t" font-weight="700">data_processor.py</text>
+  <text x="800" y="118" class="s" font-size="10.5">normalise · classify (+conf)</text>
+  <text x="800" y="134" class="s" font-size="10.5">MITRE enrich · dedup · flow_id</text>
+  <text x="800" y="160" class="t" font-weight="700">metrics.py</text>
+  <text x="800" y="180" class="s" font-size="10.5">confusion · MTTD · 3-way</text>
+  <text x="800" y="196" class="s" font-size="10.5">correlation value</text>
+  <text x="800" y="216" class="s" font-size="10.5">experiments.py (mean±95% CI)</text>
+
+  <!-- Ground truth -->
+  <rect class="box" x="518" y="244" width="250" height="58" fill="#f3eefb"/>
+  <text x="528" y="268" class="t" font-weight="700">Ground truth (measured facts)</text>
+  <text x="528" y="286" class="s">attack_logs.py · ground_truth.json</text>
+
+  <!-- LANE 5: App -->
+  <rect class="box" x="24" y="338" width="952" height="180" fill="#fbfbfb"/>
+  <rect x="24" y="338" width="952" height="28" fill="#1a1a1a" class="box"/>
+  <text x="36" y="357" class="h">app.py — Streamlit dashboard (8 tabs)</text>
+
+  <g>
+    <rect class="box" x="40" y="380" width="150" height="48" fill="#eaf2fb"/><text x="52" y="400" class="t">📊 Attack Patterns</text><text x="52" y="418" class="s">timeline · geo · sankey</text>
+    <rect class="box" x="200" y="380" width="150" height="48" fill="#fdf3e3"/><text x="212" y="400" class="t">🚨 Incidents</text><text x="212" y="418" class="s">triage · drill-down · risk</text>
+    <rect class="box" x="360" y="380" width="150" height="48" fill="#f4f4f4"/><text x="372" y="400" class="t">🎯 MITRE ATT&amp;CK</text><text x="372" y="418" class="s">technique coverage</text>
+    <rect class="box" x="520" y="380" width="150" height="48" fill="#eef7f2"/><text x="532" y="400" class="t">📈 Detection Metrics</text><text x="532" y="418" class="s">acc · FPR · MTTD · PDF</text>
+    <rect class="box" x="680" y="380" width="150" height="48" fill="#f3eefb"/><text x="692" y="400" class="t">🧪 Evaluation</text><text x="692" y="418" class="s">3-way · 95% CI</text>
+    <rect class="box" x="840" y="380" width="136" height="48" fill="#f4f4f4"/><text x="852" y="400" class="t">🖥️ Assets</text><text x="852" y="418" class="s">criticality</text>
+
+    <rect class="box" x="40" y="438" width="150" height="46" fill="#f4f4f4"/><text x="52" y="466" class="t">🗂️ Alert Explorer</text>
+    <rect class="box" x="200" y="438" width="150" height="46" fill="#f4f4f4"/><text x="212" y="466" class="t">ℹ️ About + audit</text>
+  </g>
+
+  <!-- Cross-cutting services -->
+  <text x="380" y="466" class="lane">Cross-cutting</text>
+  <rect class="box" x="380" y="474" width="596" height="40" fill="#ffffff"/>
+  <text x="392" y="491" class="s">enrichment.py (offline TI + GeoIP) · risk.py (composite score) · notifier.py (opt-in webhook)</text>
+  <text x="392" y="506" class="s">audit.py · auth.py · prefs.py · reporting.py (Markdown / PDF)</text>
+
+  <text x="24" y="556" class="lane">Quality &amp; deployment</text>
+  <rect class="box" x="24" y="566" width="952" height="44" fill="#fbfbfb"/>
+  <text x="36" y="585" class="s">pytest (130 tests) · ruff · black · mypy · pip-audit CVE scan · GitHub Actions CI (py3.14) · Docker (non-root) · colour-blind palette</text>
+  <text x="36" y="602" class="s">All detection metrics computed live from the alert stream — ground truth supplies only measured lab facts.</text>
+
+  <!-- edges -->
+  <path class="edge" d="M224,113 L276,120"/>
+  <path class="edge" d="M224,185 L276,160"/>
+  <path class="edge" d="M466,149 L518,149"/>
+  <path class="edge" d="M768,149 L790,149"/>
+  <path class="edge" d="M643,244 L643,224"/>
+  <path class="edge" d="M883,224 L883,338"/>
+</svg>

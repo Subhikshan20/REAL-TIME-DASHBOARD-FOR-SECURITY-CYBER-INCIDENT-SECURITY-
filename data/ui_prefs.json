@@ -1,0 +1,7 @@
+{
+  "source_label": "Wazuh export",
+  "window_minutes": 15,
+  "auto_refresh": false,
+  "interval": 15,
+  "theme_mode": "System"
+}

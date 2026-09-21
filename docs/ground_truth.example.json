@@ -1,0 +1,51 @@
+{
+  "_comment": "REAL-LAB GROUND TRUTH TEMPLATE. Copy this to data/ground_truth.json and replace every value with what you actually launched. Keys starting with '_' are notes for you and are ignored by the dashboard. Do NOT click 'Regenerate' in the sidebar while using real data — it overwrites data/ground_truth.json with mock facts.",
+  "_required_fields": "Each campaign needs: attack_type, source_ip, start_time, end_time, malicious_attempts. The benign block needs benign_events. Everything else (target_ip, mitre_techniques, notes) is optional and only documents the run.",
+  "_time_format": "ISO-8601 UTC, e.g. 2026-07-01T10:00:00.000+0000. Use the attacker box clock in UTC; the dashboard matches alerts whose src_ip + timestamp fall inside [start_time, end_time].",
+  "campaigns": [
+    {
+      "attack_type": "Scan",
+      "source_ip": "REPLACE_WITH_ATTACKER_IP",
+      "target_ip": "REPLACE_WITH_TARGET_IP",
+      "start_time": "2026-07-01T10:00:00.000+0000",
+      "end_time": "2026-07-01T10:05:00.000+0000",
+      "malicious_attempts": 0,
+      "_attempts_help": "Ports probed (from nmap output). attack_logs.parse_nmap can compute this for you.",
+      "mitre_techniques": ["T1595", "T1046", "T1018"]
+    },
+    {
+      "attack_type": "Brute Force",
+      "source_ip": "REPLACE_WITH_ATTACKER_IP",
+      "target_ip": "REPLACE_WITH_TARGET_IP",
+      "start_time": "2026-07-01T10:10:00.000+0000",
+      "end_time": "2026-07-01T10:18:00.000+0000",
+      "malicious_attempts": 0,
+      "_attempts_help": "Total login tries (the 'N of M' in hydra output). attack_logs.parse_hydra can compute this.",
+      "mitre_techniques": ["T1110", "T1110.001"]
+    },
+    {
+      "attack_type": "DoS",
+      "source_ip": "REPLACE_WITH_ATTACKER_IP",
+      "target_ip": "REPLACE_WITH_TARGET_IP",
+      "start_time": "2026-07-01T10:25:00.000+0000",
+      "end_time": "2026-07-01T10:28:00.000+0000",
+      "malicious_attempts": 0,
+      "_attempts_help": "Packets/requests sent (from hping3/slowhttptest summary), or your best measured count.",
+      "mitre_techniques": ["T1498", "T1499"]
+    },
+    {
+      "attack_type": "Exploit Delivery",
+      "source_ip": "REPLACE_WITH_ATTACKER_IP",
+      "target_ip": "REPLACE_WITH_TARGET_IP",
+      "start_time": "2026-07-01T10:35:00.000+0000",
+      "end_time": "2026-07-01T10:40:00.000+0000",
+      "malicious_attempts": 0,
+      "_attempts_help": "Number of exploit/payload requests you sent.",
+      "mitre_techniques": ["T1190", "T1203", "T1059"]
+    }
+  ],
+  "benign": {
+    "benign_events": 0,
+    "_benign_help": "Size of the benign (negative) population during the test window — i.e. how many legitimate events could have alerted but should not. Measure it from a quiet baseline capture (see docs/RUNBOOK.md Step 3). This scales TN and FPR; state your method in the dissertation's threats-to-validity."
+  }
+}

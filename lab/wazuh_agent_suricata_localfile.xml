@@ -1,0 +1,10 @@
+<!--
+  Suricata → Wazuh integration.
+  Add this block inside <ossec_config> in /var/ossec/etc/ossec.conf on the victim,
+  then: sudo systemctl restart wazuh-agent
+  (install_wazuh_agent.sh inserts it for you.)
+-->
+<localfile>
+  <log_format>json</log_format>
+  <location>/var/log/suricata/eve.json</location>
+</localfile>

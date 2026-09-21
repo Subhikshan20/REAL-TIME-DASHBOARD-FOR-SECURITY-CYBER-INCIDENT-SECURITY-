@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-06-28T17:22:26.297+0000",
+  "simulation_window_minutes": 90,
+  "seed": 1012,
+  "note": "Measured lab facts only. Every detection metric (TP/FP/FN/TN, accuracy, FPR, MTTD) is computed by the dashboard from the live alert stream \u2014 nothing here pre-states a result.",
+  "campaigns": [
+    {
+      "attack_type": "Scan",
+      "source_ip": "192.0.2.66",
+      "target_ip": "10.0.0.6",
+      "start_time": "2026-06-28T15:54:26.297+0000",
+      "end_time": "2026-06-28T15:58:53.747+0000",
+      "malicious_attempts": 119,
+      "mitre_techniques": [
+        "T1595",
+        "T1046",
+        "T1018"
+      ]
+    },
+    {
+      "attack_type": "Brute Force",
+      "source_ip": "45.155.205.99",
+      "target_ip": "10.0.0.10",
+      "start_time": "2026-06-28T16:10:26.297+0000",
+      "end_time": "2026-06-28T16:15:47.210+0000",
+      "malicious_attempts": 100,
+      "mitre_techniques": [
+        "T1110",
+        "T1110.001"
+      ]
+    },
+    {
+      "attack_type": "DoS",
+      "source_ip": "45.155.205.99",
+      "target_ip": "10.0.0.7",
+      "start_time": "2026-06-28T16:32:26.297+0000",
+      "end_time": "2026-06-28T16:36:02.338+0000",
+      "malicious_attempts": 147,
+      "mitre_techniques": [
+        "T1498",
+        "T1499"
+      ]
+    },
+    {
+      "attack_type": "Exploit Delivery",
+      "source_ip": "198.51.100.23",
+      "target_ip": "10.0.0.7",
+      "start_time": "2026-06-28T16:47:26.297+0000",
+      "end_time": "2026-06-28T16:54:15.045+0000",
+      "malicious_attempts": 41,
+      "mitre_techniques": [
+        "T1190",
+        "T1203",
+        "T1059"
+      ]
+    },
+    {
+      "attack_type": "Brute Force",
+      "source_ip": "91.92.250.10",
+      "target_ip": "10.0.0.10",
+      "start_time": "2026-06-28T17:04:26.297+0000",
+      "end_time": "2026-06-28T17:09:11.259+0000",
+      "malicious_attempts": 29,
+      "detection_note": "encrypted/evaded channel \u2014 detected only via host auth logs",
+      "mitre_techniques": [
+        "T1110",
+        "T1110.001"
+      ]
+    }
+  ],
+  "benign": {
+    "benign_events": 8000
+  }
+}

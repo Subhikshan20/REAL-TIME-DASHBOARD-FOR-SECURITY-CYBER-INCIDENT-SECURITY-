@@ -1,0 +1,2414 @@
+[
+  {
+    "timestamp": "2026-07-16T12:48:47.413+0000",
+    "id": "1784206127.635",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": false,
+      "attack_type": "Benign (False Positive)"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "31530",
+      "level": 3,
+      "description": "ET POLICY Self Signed SSL Certificate",
+      "groups": [
+        "ids",
+        "suricata",
+        "policy"
+      ],
+      "firedtimes": 1,
+      "mail": false,
+      "mitre": {
+        "id": [],
+        "tactic": [],
+        "technique": []
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "10.0.0.10",
+      "src_port": "8082",
+      "dstip": "10.0.0.145",
+      "dest_ip": "10.0.0.145",
+      "dest_port": "443",
+      "proto": "TCP",
+      "flow_id": 277416779779887,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2002087",
+        "rev": "1",
+        "signature": "ET POLICY Self Signed SSL Certificate",
+        "category": "Not Suspicious Traffic",
+        "severity": "3"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:47:48.734+0000",
+    "id": "1784206068.133",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (root)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 33,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "root",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:47:29.670+0000",
+    "id": "1784206049.126",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (postgres)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 36,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "postgres",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:47:24.849+0000",
+    "id": "1784206044.128",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (postgres)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 21,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "postgres",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:47:21.115+0000",
+    "id": "1784206041.123",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (admin)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 36,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "admin",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:47:16.465+0000",
+    "id": "1784206036.117",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (postgres)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 36,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "postgres",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:47:14.050+0000",
+    "id": "1784206034.134",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET SCAN SSH BruteForce Tool detected",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 31,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "24647",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "22",
+      "proto": "TCP",
+      "flow_id": 837624941332012,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2001219",
+        "rev": "1",
+        "signature": "ET SCAN SSH BruteForce Tool detected",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "1"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:47:12.209+0000",
+    "id": "1784206032.132",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET SCAN SSH BruteForce Tool detected",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 33,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "31536",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "22",
+      "proto": "TCP",
+      "flow_id": 458434056973990,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2001219",
+        "rev": "1",
+        "signature": "ET SCAN SSH BruteForce Tool detected",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "1"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:47:08.565+0000",
+    "id": "1784206028.131",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET POLICY Multiple FTP login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 37,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "55829",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "21",
+      "proto": "TCP",
+      "flow_id": 786417377811664,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2002383",
+        "rev": "1",
+        "signature": "ET POLICY Multiple FTP login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "2"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:47:05.626+0000",
+    "id": "1784206025.130",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET EXPLOIT Repeated SSH login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 34,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "23576",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "3389",
+      "proto": "TCP",
+      "flow_id": 581414108532235,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2006546",
+        "rev": "1",
+        "signature": "ET EXPLOIT Repeated SSH login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "1"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:47:04.958+0000",
+    "id": "1784206024.114",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (ubuntu)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 56,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "ubuntu",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:47:03.765+0000",
+    "id": "1784206023.129",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET POLICY Multiple FTP login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 37,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "57526",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "3389",
+      "proto": "TCP",
+      "flow_id": 787765043413898,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2002383",
+        "rev": "1",
+        "signature": "ET POLICY Multiple FTP login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "2"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:47:01.177+0000",
+    "id": "1784206021.120",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (root)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 56,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "root",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:47:00.835+0000",
+    "id": "1784206020.127",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET EXPLOIT Repeated SSH login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 8,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "42126",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "21",
+      "proto": "TCP",
+      "flow_id": 873552297789267,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2006546",
+        "rev": "1",
+        "signature": "ET EXPLOIT Repeated SSH login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "1"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:57.852+0000",
+    "id": "1784206017.112",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (ubuntu)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 37,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "ubuntu",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:57.213+0000",
+    "id": "1784206017.125",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET SCAN SSH BruteForce Tool detected",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 26,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "60384",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "22",
+      "proto": "TCP",
+      "flow_id": 645905026352972,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2001219",
+        "rev": "1",
+        "signature": "ET SCAN SSH BruteForce Tool detected",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "1"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:54.260+0000",
+    "id": "1784206014.109",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (admin)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 26,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "admin",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:53.618+0000",
+    "id": "1784206013.124",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET SCAN SSH BruteForce Tool detected",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 31,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "61303",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "3389",
+      "proto": "TCP",
+      "flow_id": 587608506018001,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2001219",
+        "rev": "1",
+        "signature": "ET SCAN SSH BruteForce Tool detected",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "1"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:51.819+0000",
+    "id": "1784206011.122",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET EXPLOIT Repeated SSH login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 22,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "3695",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "22",
+      "proto": "TCP",
+      "flow_id": 456119311299022,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2006546",
+        "rev": "1",
+        "signature": "ET EXPLOIT Repeated SSH login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "1"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:47.772+0000",
+    "id": "1784206007.121",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET POLICY Multiple FTP login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 48,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "40215",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "3389",
+      "proto": "TCP",
+      "flow_id": 893790242212852,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2002383",
+        "rev": "1",
+        "signature": "ET POLICY Multiple FTP login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "2"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:46.744+0000",
+    "id": "1784206006.107",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (postgres)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 48,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "postgres",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:46.039+0000",
+    "id": "1784206006.119",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET EXPLOIT Repeated SSH login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 5,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "23378",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "3389",
+      "proto": "TCP",
+      "flow_id": 849202427090482,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2006546",
+        "rev": "1",
+        "signature": "ET EXPLOIT Repeated SSH login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "1"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:42.353+0000",
+    "id": "1784206002.118",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET POLICY Multiple FTP login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 16,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "37500",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "3389",
+      "proto": "TCP",
+      "flow_id": 400076784396697,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2002383",
+        "rev": "1",
+        "signature": "ET POLICY Multiple FTP login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "2"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:41.111+0000",
+    "id": "1784206001.105",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (postgres)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 57,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "postgres",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:40.505+0000",
+    "id": "1784206000.116",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET POLICY Multiple FTP login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 29,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "46126",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "3389",
+      "proto": "TCP",
+      "flow_id": 495484560702541,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2002383",
+        "rev": "1",
+        "signature": "ET POLICY Multiple FTP login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "2"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:37.312+0000",
+    "id": "1784205997.115",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET POLICY Multiple FTP login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 12,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "51830",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "22",
+      "proto": "TCP",
+      "flow_id": 342057497645289,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2002383",
+        "rev": "1",
+        "signature": "ET POLICY Multiple FTP login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "2"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:33.126+0000",
+    "id": "1784205993.113",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET POLICY Multiple FTP login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 14,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "20240",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "3389",
+      "proto": "TCP",
+      "flow_id": 423993369730545,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2002383",
+        "rev": "1",
+        "signature": "ET POLICY Multiple FTP login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "2"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:30.501+0000",
+    "id": "1784205990.111",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET POLICY Multiple FTP login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 2,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "41576",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "22",
+      "proto": "TCP",
+      "flow_id": 215680575949756,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2002383",
+        "rev": "1",
+        "signature": "ET POLICY Multiple FTP login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "2"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:28.079+0000",
+    "id": "1784205988.110",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET EXPLOIT Repeated SSH login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 8,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "50383",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "21",
+      "proto": "TCP",
+      "flow_id": 137300182433754,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2006546",
+        "rev": "1",
+        "signature": "ET EXPLOIT Repeated SSH login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "1"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:25.513+0000",
+    "id": "1784205985.108",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET SCAN SSH BruteForce Tool detected",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 16,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "28714",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "3389",
+      "proto": "TCP",
+      "flow_id": 734195642007733,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2001219",
+        "rev": "1",
+        "signature": "ET SCAN SSH BruteForce Tool detected",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "1"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:21.944+0000",
+    "id": "1784205981.89",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (postgres)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 34,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "postgres",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:21.501+0000",
+    "id": "1784205981.106",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET POLICY Multiple FTP login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 16,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "34132",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "21",
+      "proto": "TCP",
+      "flow_id": 931647030664671,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2002383",
+        "rev": "1",
+        "signature": "ET POLICY Multiple FTP login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "2"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:20.529+0000",
+    "id": "1784205980.98",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (ubuntu)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 46,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "ubuntu",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:19.892+0000",
+    "id": "1784205979.104",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET POLICY Multiple FTP login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 43,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "45681",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "21",
+      "proto": "TCP",
+      "flow_id": 886075740037268,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2002383",
+        "rev": "1",
+        "signature": "ET POLICY Multiple FTP login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "2"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:16.577+0000",
+    "id": "1784205976.86",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (postgres)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 7,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "postgres",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:16.021+0000",
+    "id": "1784205976.103",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET SCAN SSH BruteForce Tool detected",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 37,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "62516",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "3389",
+      "proto": "TCP",
+      "flow_id": 211836539684354,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2001219",
+        "rev": "1",
+        "signature": "ET SCAN SSH BruteForce Tool detected",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "1"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:15.909+0000",
+    "id": "1784205975.92",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (admin)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 18,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "admin",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:15.071+0000",
+    "id": "1784205975.96",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "002",
+      "name": "web-server-01",
+      "ip": "10.0.0.5"
+    },
+    "rule": {
+      "id": "5710",
+      "level": 10,
+      "description": "sshd: Attempt to login using a non-existent user (postgres)",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed",
+        "brute_force"
+      ],
+      "firedtimes": 35,
+      "mail": true,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/auth.log",
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "dstuser": "postgres",
+      "dstip": "10.0.0.10"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:14.325+0000",
+    "id": "1784205974.102",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET POLICY Multiple FTP login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 40,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "21600",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "21",
+      "proto": "TCP",
+      "flow_id": 440565798562142,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2002383",
+        "rev": "1",
+        "signature": "ET POLICY Multiple FTP login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "2"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  },
+  {
+    "timestamp": "2026-07-16T12:46:11.336+0000",
+    "id": "1784205971.101",
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "validation": {
+      "is_true_positive": true,
+      "attack_type": "Brute Force"
+    },
+    "agent": {
+      "id": "001",
+      "name": "suricata-sensor",
+      "ip": "10.0.0.2"
+    },
+    "rule": {
+      "id": "5712",
+      "level": 10,
+      "description": "ET EXPLOIT Repeated SSH login failures",
+      "groups": [
+        "ids",
+        "suricata",
+        "authentication_failures",
+        "brute_force"
+      ],
+      "firedtimes": 40,
+      "mail": false,
+      "mitre": {
+        "id": [
+          "T1110",
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ],
+        "technique": [
+          "Brute Force",
+          "Password Guessing"
+        ]
+      }
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "suricata"
+    },
+    "data": {
+      "srcip": "185.220.101.42",
+      "src_port": "60910",
+      "dstip": "10.0.0.10",
+      "dest_ip": "10.0.0.10",
+      "dest_port": "21",
+      "proto": "TCP",
+      "flow_id": 355051027513062,
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "2006546",
+        "rev": "1",
+        "signature": "ET EXPLOIT Repeated SSH login failures",
+        "category": "Attempted Administrator Privilege Gain",
+        "severity": "1"
+      }
+    },
+    "GeoLocation": {
+      "country_name": "Germany"
+    }
+  }
+]

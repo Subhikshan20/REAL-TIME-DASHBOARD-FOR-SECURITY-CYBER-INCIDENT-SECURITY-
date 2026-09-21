@@ -1,0 +1,86 @@
+{
+  "generated_at": "2026-07-16T12:53:02.369+0000",
+  "simulation_window_minutes": 90,
+  "seed": 107268800,
+  "note": "Measured lab facts only. Every detection metric (TP/FP/FN/TN, accuracy, FPR, MTTD) is computed by the dashboard from the live alert stream \u2014 nothing here pre-states a result.",
+  "campaigns": [
+    {
+      "attack_type": "Brute Force",
+      "source_ip": "185.220.101.42",
+      "target_ip": "10.0.0.10",
+      "start_time": "2026-07-16T12:42:00.392+0000",
+      "end_time": "2026-07-16T12:48:13.442+0000",
+      "malicious_attempts": 109,
+      "mitre_techniques": [
+        "T1110",
+        "T1110.001"
+      ]
+    },
+    {
+      "attack_type": "Scan",
+      "source_ip": "91.92.250.10",
+      "target_ip": "10.0.0.25",
+      "start_time": "2026-07-16T11:24:47.314+0000",
+      "end_time": "2026-07-16T11:29:07.861+0000",
+      "malicious_attempts": 135,
+      "mitre_techniques": [
+        "T1595",
+        "T1046",
+        "T1018"
+      ]
+    },
+    {
+      "attack_type": "DoS",
+      "source_ip": "45.155.205.99",
+      "target_ip": "10.0.0.5",
+      "start_time": "2026-07-16T12:17:28.911+0000",
+      "end_time": "2026-07-16T12:20:58.243+0000",
+      "malicious_attempts": 131,
+      "mitre_techniques": [
+        "T1498",
+        "T1499"
+      ]
+    },
+    {
+      "attack_type": "DoS",
+      "source_ip": "103.97.176.18",
+      "target_ip": "10.0.0.10",
+      "start_time": "2026-07-16T11:54:46.166+0000",
+      "end_time": "2026-07-16T11:58:13.534+0000",
+      "malicious_attempts": 190,
+      "mitre_techniques": [
+        "T1498",
+        "T1499"
+      ]
+    },
+    {
+      "attack_type": "Exploit Delivery",
+      "source_ip": "5.188.206.18",
+      "target_ip": "10.0.0.12",
+      "start_time": "2026-07-16T12:09:59.172+0000",
+      "end_time": "2026-07-16T12:16:23.353+0000",
+      "malicious_attempts": 30,
+      "mitre_techniques": [
+        "T1190",
+        "T1203",
+        "T1059"
+      ]
+    },
+    {
+      "attack_type": "Brute Force",
+      "source_ip": "45.95.147.236",
+      "target_ip": "10.0.0.30",
+      "start_time": "2026-07-16T12:03:04.335+0000",
+      "end_time": "2026-07-16T12:07:23.731+0000",
+      "malicious_attempts": 34,
+      "detection_note": "encrypted/evaded channel \u2014 detected only via host auth logs",
+      "mitre_techniques": [
+        "T1110",
+        "T1110.001"
+      ]
+    }
+  ],
+  "benign": {
+    "benign_events": 11843
+  }
+}

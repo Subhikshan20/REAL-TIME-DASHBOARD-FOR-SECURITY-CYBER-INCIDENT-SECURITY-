@@ -1,0 +1,30 @@
+# Reproducible deployment of the SOC dashboard.
+#   docker compose -f docker/docker-compose.yml up --build
+#
+# Uncomment / edit the environment block to point at your live Wazuh lab, and
+# the volume to ingest a real Suricata eve.json from the host.
+services:
+  soc-dashboard:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: soc-dashboard:1.0.0
+    container_name: soc-dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      SOC_LOG_LEVEL: INFO
+      # --- Live Wazuh (north-bound API + Indexer) -----------------------
+      # WAZUH_API_URL: "https://wazuh-manager:55000"
+      # WAZUH_API_USER: "wazuh-wui"
+      # WAZUH_API_PASSWORD: "${WAZUH_API_PASSWORD}"
+      # WAZUH_INDEXER_URL: "https://wazuh-indexer:9200"
+      # WAZUH_INDEXER_USER: "admin"
+      # WAZUH_INDEXER_PASSWORD: "${WAZUH_INDEXER_PASSWORD}"
+      # WAZUH_VERIFY_SSL: "false"
+      # --- Real Suricata eve.json (mounted below) -----------------------
+      # SURICATA_EVE_PATH: "/var/log/suricata/eve.json"
+    volumes:
+      # Mount the host's Suricata logs read-only to ingest real sensor output.
+      - /var/log/suricata:/var/log/suricata:ro
+    restart: unless-stopped
